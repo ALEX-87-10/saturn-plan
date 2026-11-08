@@ -37,13 +37,20 @@ python3 -m http.server 8080
 
 ## 部署
 
-推送到 `main` 分支后，GitHub Actions 会自动执行 `configure-pages` → `upload-pages-artifact` → `deploy-pages`，站点发布在：
+推送到 `main` 分支后，GitHub Actions 自动执行 `configure-pages` → `upload-pages-artifact` → `deploy-pages`，站点地址：
 
 ```
-https://<用户名>.github.io/<仓库名>/
+https://alex-87-10.github.io/saturn-plan/
 ```
 
-首次部署时 `configure-pages` 的 `enablement: true` 会顺带开启仓库的 Pages 功能，无需手动到设置页操作。
+### 首次部署必须先做两件事
+
+新仓库首次运行时，`GITHUB_TOKEN` 没有创建 Pages 站点的权限，会报 `Create Pages site failed: Resource not accessible by integration`。手动完成下面两顶后，再次推送或在 Actions 页点 `Re-run all jobs` 即可：
+
+1. **Settings → Actions → General → Workflow permissions**：选 `Read and write permissions`，保存。
+2. **Settings → Pages → Build and deployment → Source**：选 `GitHub Actions`。
+
+完成后不需要改任何代码，工作流会自动发布。
 
 ## 数据说明
 
