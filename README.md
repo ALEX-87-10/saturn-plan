@@ -1,3 +1,5 @@
+> 站点：https://alex-87-10.github.io/saturn-plan/
+
 # 土星计划 · 个人工作台
 
 一个纯前端静态站，把日常最常用的四件事放在同一个界面里：待办清单、笔记、记账、习惯打卡。
@@ -43,14 +45,7 @@ python3 -m http.server 8080
 https://alex-87-10.github.io/saturn-plan/
 ```
 
-### 首次部署必须先做两件事
-
-新仓库首次运行时，`GITHUB_TOKEN` 没有创建 Pages 站点的权限，会报 `Create Pages site failed: Resource not accessible by integration`。手动完成下面两顶后，再次推送或在 Actions 页点 `Re-run all jobs` 即可：
-
-1. **Settings → Actions → General → Workflow permissions**：选 `Read and write permissions`，保存。
-2. **Settings → Pages → Build and deployment → Source**：选 `GitHub Actions`。
-
-完成后不需要改任何代码，工作流会自动发布。
+首次部署需要先在仓库级设置里开启：Settings → Pages → Source 选 `GitHub Actions`，并把 Settings → Actions → General 的 Workflow permissions 调为 `Read and write permissions`。完成后每次 push 自动发布，无需重复配置。
 
 ## 数据说明
 
