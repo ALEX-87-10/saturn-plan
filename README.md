@@ -1,4 +1,4 @@
-> 站点：https://alex-87-10.github.io/saturn-plan/
+> 站点：https://chinahomeby.github.io/saturn-plan/
 
 # 土星计划 · 个人工作台
 
@@ -42,7 +42,7 @@ python3 -m http.server 8080
 推送到 `main` 分支后，GitHub Actions 自动执行 `configure-pages` → `upload-pages-artifact` → `deploy-pages`，站点地址：
 
 ```
-https://alex-87-10.github.io/saturn-plan/
+https://chinahomeby.github.io/saturn-plan/
 ```
 
 首次部署需要先在仓库级设置里开启：Settings → Pages → Source 选 `GitHub Actions`，并把 Settings → Actions → General 的 Workflow permissions 调为 `Read and write permissions`。完成后每次 push 自动发布，无需重复配置。
